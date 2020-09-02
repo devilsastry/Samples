@@ -1,0 +1,185 @@
+{
+  "name": "test6",
+  "host_group": [
+    {
+      "trusted": true,
+      "contact": "tcp",
+      "proxy_receivers": {},
+      "sleep_min": 30,
+      "watchdog": 0,
+      "executors": [
+        "psh",
+        "cmd"
+      ],
+      "server": "://None:None",
+      "architecture": "amd64",
+      "display_name": "DESKTOP-FD99K7J$DESKTOP-FD99K7J\\electrobot",
+      "pid": 9208,
+      "sleep_max": 60,
+      "group": "red",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "privilege": "User",
+      "ppid": 6568,
+      "platform": "windows",
+      "paw": "qywnyb",
+      "links": [
+        {
+          "pid": null,
+          "score": 0,
+          "jitter": 0,
+          "host": "DESKTOP-FD99K7J",
+          "id": 918937,
+          "collect": "2020-09-02 03:22:21",
+          "finish": null,
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_id": "T1107",
+            "technique_name": "File Deletion",
+            "privilege": "",
+            "requirements": [],
+            "cleanup": [],
+            "parsers": [],
+            "platform": "windows",
+            "access": {},
+            "variations": [],
+            "additional_info": {},
+            "test": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+            "name": "Avoid logs",
+            "executor": "psh",
+            "payloads": [],
+            "description": "Stop terminal from logging history",
+            "buckets": [
+              "d",
+              "e",
+              "f",
+              "e",
+              "n",
+              "s",
+              "e",
+              "-",
+              "e",
+              "v",
+              "a",
+              "s",
+              "i",
+              "o",
+              "n"
+            ],
+            "timeout": 60
+          },
+          "output": "False",
+          "unique": "918937",
+          "facts": [],
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "cleanup": 0,
+          "status": -3,
+          "decide": "2020-09-02 03:22:21",
+          "pin": 0,
+          "paw": "qywnyb"
+        }
+      ],
+      "host": "DESKTOP-FD99K7J",
+      "username": "DESKTOP-FD99K7J\\electrobot",
+      "last_seen": "2020-09-02 03:30:15",
+      "exe_name": "splunkd.exe"
+    }
+  ],
+  "start": "2020-09-02 03:29:46",
+  "steps": {
+    "qywnyb": {
+      "steps": [
+        {
+          "ability_id": "b007f6e8-4a87-4440-8888-29ceab047d9b",
+          "command": "U2V0LU1wUHJlZmVyZW5jZSAtRGlzYWJsZUludHJ1c2lvblByZXZlbnRpb25TeXN0ZW0gJHRydWU7U2V0LU1wUHJlZmVyZW5jZSAtRGlzYWJsZUlPQVZQcm90ZWN0aW9uICR0cnVlO1NldC1NcFByZWZlcmVuY2UgLURpc2FibGVSZWFsdGltZU1vbml0b3JpbmcgJHRydWU7U2V0LU1wUHJlZmVyZW5jZSAtRGlzYWJsZVNjcmlwdFNjYW5uaW5nICR0cnVlO1NldC1NcFByZWZlcmVuY2UgLUVuYWJsZUNvbnRyb2xsZWRGb2xkZXJBY2Nlc3MgRGlzYWJsZWQ7",
+          "delegated": "2020-09-02 03:29:46",
+          "run": "2020-09-02 03:29:54",
+          "status": 1,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 0,
+          "description": "Disable Windows Defender All",
+          "name": "Disable Windows Defender All",
+          "attack": {
+            "tactic": "defense-evasion",
+            "technique_name": "Disabling Security Tools",
+            "technique_id": "T1089"
+          },
+          "output": "exit status 1"
+        },
+        {
+          "ability_id": "b007f6e8-4a87-4440-8888-29ceab047d9b",
+          "command": "U2V0LU1wUHJlZmVyZW5jZSAtRGlzYWJsZUludHJ1c2lvblByZXZlbnRpb25TeXN0ZW0gJGZhbHNlO1NldC1NcFByZWZlcmVuY2UgLURpc2FibGVJT0FWUHJvdGVjdGlvbiAkZmFsc2U7U2V0LU1wUHJlZmVyZW5jZSAtRGlzYWJsZVJlYWx0aW1lTW9uaXRvcmluZyAkZmFsc2U7U2V0LU1wUHJlZmVyZW5jZSAtRGlzYWJsZVNjcmlwdFNjYW5uaW5nICRmYWxzZTtTZXQtTXBQcmVmZXJlbmNlIC1FbmFibGVDb250cm9sbGVkRm9sZGVyQWNjZXNzIEVuYWJsZWQ7",
+          "delegated": "2020-09-02 03:29:56",
+          "run": "2020-09-02 03:30:15",
+          "status": 1,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 0,
+          "description": "Disable Windows Defender All",
+          "name": "Disable Windows Defender All",
+          "attack": {
+            "tactic": "defense-evasion",
+            "technique_name": "Disabling Security Tools",
+            "technique_id": "T1089"
+          },
+          "output": "exit status 1"
+        }
+      ]
+    }
+  },
+  "finish": "2020-09-02 03:30:15",
+  "planner": "atomic",
+  "adversary": {
+    "name": "test2",
+    "description": "rtd",
+    "atomic_ordering": [
+      "b007f6e8-4a87-4440-8888-29ceab047d9b"
+    ],
+    "adversary_id": "622747fc-f702-4ade-b784-1755c859cb8e"
+  },
+  "jitter": "4/8",
+  "facts": [
+    {
+      "score": 1,
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionwav",
+      "technique_id": "",
+      "value": "wav",
+      "collected_by": ""
+    },
+    {
+      "score": 1,
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionyml",
+      "technique_id": "",
+      "value": "yml",
+      "collected_by": ""
+    },
+    {
+      "score": 1,
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionpng",
+      "technique_id": "",
+      "value": "png",
+      "collected_by": ""
+    },
+    {
+      "score": 1,
+      "trait": "server.malicious.url",
+      "unique": "server.malicious.urlkeyloggedsite.com",
+      "technique_id": "",
+      "value": "keyloggedsite.com",
+      "collected_by": ""
+    }
+  ],
+  "skipped_abilities": [
+    {
+      "qywnyb": []
+    }
+  ]
+}
