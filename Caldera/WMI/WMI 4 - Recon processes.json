@@ -1,0 +1,447 @@
+{
+  "name": "WMI 4",
+  "host_group": [
+    {
+      "watchdog": 0,
+      "trusted": true,
+      "last_seen": "2020-09-02 21:59:23",
+      "sleep_max": 60,
+      "proxy_receivers": {},
+      "architecture": "amd64",
+      "executors": [
+        "psh",
+        "cmd"
+      ],
+      "host": "DESKTOP-FD99K7J",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "privilege": "User",
+      "contact": "tcp",
+      "sleep_min": 30,
+      "links": [
+        {
+          "status": -3,
+          "paw": "gnjezl",
+          "unique": "889994",
+          "jitter": 0,
+          "finish": null,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "cleanup": 0,
+          "collect": "2020-09-02 21:07:21",
+          "host": "DESKTOP-FD99K7J",
+          "score": 0,
+          "pin": 0,
+          "decide": "2020-09-02 21:07:21",
+          "id": 889994,
+          "facts": [],
+          "pid": null,
+          "ability": {
+            "tactic": "defense-evasion",
+            "language": null,
+            "description": "Stop terminal from logging history",
+            "executor": "psh",
+            "code": null,
+            "parsers": [],
+            "access": {},
+            "build_target": null,
+            "privilege": null,
+            "requirements": [],
+            "additional_info": {},
+            "name": "Avoid logs",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "variations": [],
+            "timeout": 60,
+            "platform": "windows",
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "cleanup": [],
+            "payloads": [],
+            "repeatable": false,
+            "technique_id": "T1070.003",
+            "buckets": [
+              "defense-evasion"
+            ],
+            "test": "Q2xlYXItSGlzdG9yeTtDbGVhcg=="
+          },
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "output": "False"
+        }
+      ],
+      "paw": "gnjezl",
+      "display_name": "DESKTOP-FD99K7J$DESKTOP-FD99K7J\\electrobot",
+      "server": "://None:None",
+      "pid": 8476,
+      "username": "DESKTOP-FD99K7J\\electrobot",
+      "platform": "windows",
+      "proxy_chain": [],
+      "group": "red",
+      "ppid": 5676,
+      "exe_name": "splunkd.exe"
+    }
+  ],
+  "start": "2020-09-02 21:52:27",
+  "steps": {
+    "gnjezl": {
+      "steps": [
+        {
+          "ability_id": "94f21386-9547-43c4-99df-938ab05d45ce",
+          "command": "d21pYyBwcm9jZXNzIGdldCBleGVjdXRhYmxlcGF0aCxuYW1lLHByb2Nlc3NpZCxwYXJlbnRwcm9jZXNzaWQgPj4gJGVudjpBUFBEQVRBXHZtdG9vbHMubG9nO2NhdCAkZW52OkFQUERBVEFcdm10b29scy5sb2c=",
+          "delegated": "2020-09-02 21:52:27",
+          "run": "2020-09-02 21:52:42",
+          "status": 0,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 0,
+          "description": "Capture process id, executable path, pid and parent pid before writing to disk",
+          "name": "WMIC Process Enumeration",
+          "attack": {
+            "tactic": "collection",
+            "technique_name": "WMIC",
+            "technique_id": "T1047"
+          },
+          "output": "ExecutablePath                                                                                                   Name                                                                ParentProcessId  ProcessId  \r\r                                                                                                                 System Idle Process                                                 0                0          \r\r                                                                                                                 System                                                              0                4          \r\r                                                                                                                 Registry                                                            4                120        \r\r                                                                                                                 smss.exe                                                            4                404        \r\r                                                                                                                 csrss.exe                                                           636              644        \r\r                                                                                                                 wininit.exe                                                         636              740        \r\r                                                                                                                 services.exe                                                        740              812        \r\r                                                                                                                 lsass.exe                                                           740              824        \r\r                                                                                                                 svchost.exe                                                         812              1012       \r\r                                                                                                                 svchost.exe                                                         812              96         \r\r                                                                                                                 fontdrvhost.exe                                                     740              428        \r\r                                                                                                                 svchost.exe                                                         812              752        \r\r                                                                                                                 svchost.exe                                                         812              92         \r\r                                                                                                                 svchost.exe                                                         812              1248       \r\r                                                                                                                 svchost.exe                                                         812              1264       \r\r                                                                                                                 svchost.exe                                                         812              1272       \r\r                                                                                                                 svchost.exe                                                         812              1324       \r\r                                                                                                                 svchost.exe                                                         812              1456       \r\r                                                                                                                 svchost.exe                                                         812              1476       \r\r                                                                                                                 svchost.exe                                                         812              1528       \r\r                                                                                                                 svchost.exe                                                         812              1552       \r\r                                                                                                                 svchost.exe                                                         812              1772       \r\r                                                                                                                 svchost.exe                                                         812              1832       \r\r                                                                                                                 svchost.exe                                                         812              1864       \r\r                                                                                                                 svchost.exe                                                         812              1956       \r\r                                                                                                                 svchost.exe                                                         812              2004       \r\r                                                                                                                 NVDisplay.Container.exe                                             812              1624       \r\r                                                                                                                 svchost.exe                                                         812              2056       \r\r                                                                                                                 svchost.exe                                                         812              2172       \r\r                                                                                                                 svchost.exe                                                         812              2204       \r\r                                                                                                                 svchost.exe                                                         812              2212       \r\r                                                                                                                 svchost.exe                                                         812              2228       \r\r                                                                                                                 svchost.exe                                                         812              2236       \r\r                                                                                                                 svchost.exe                                                         812              2260       \r\r                                                                                                                 Memory Compression                                                  4                2396       \r\r                                                                                                                 svchost.exe                                                         812              2444       \r\r                                                                                                                 svchost.exe                                                         812              2536       \r\r                                                                                                                 svchost.exe                                                         812              2572       \r\r                                                                                                                 svchost.exe                                                         812              2588       \r\r                                                                                                                 svchost.exe                                                         812              2596       \r\r                                                                                                                 svchost.exe                                                         812              2852       \r\r                                                                                                                 svchost.exe                                                         812              3012       \r\r                                                                                                                 svchost.exe                                                         812              3064       \r\r                                                                                                                 svchost.exe                                                         812              2488       \r\r                                                                                                                 svchost.exe                                                         812              2988       \r\r                                                                                                                 svchost.exe                                                         812              3236       \r\r                                                                                                                 svchost.exe                                                         812              3308       \r\r                                                                                                                 spoolsv.exe                                                         812              3520       \r\r                                                                                                                 svchost.exe                                                         812              3652       \r\r                                                                                                                 svchost.exe                                                         812              3672       \r\r                                                                                                                 svchost.exe                                                         812              3712       \r\r                                                                                                                 svchost.exe                                                         812              3744       \r\r                                                                                                                 svchost.exe                                                         812              4128       \r\r                                                                                                                 svchost.exe                                                         812              4136       \r\r                                                                                                                 svchost.exe                                                         812              4148       \r\r                                                                                                                 svchost.exe                                                         812              4164       \r\r                                                                                                                 svchost.exe                                                         812              4172       \r\r                                                                                                                 nvcontainer.exe                                                     812              4192       \r\r                                                                                                                 svchost.exe                                                         812              4204       \r\r                                                                                                                 svchost.exe                                                         812              4212       \r\r                                                                                                                 sqlwriter.exe                                                       812              4228       \r\r                                                                                                                 RtkAudUService64.exe                                                812              4240       \r\r                                                                                                                 svchost.exe                                                         812              4272       \r\r                                                                                                                 vmnetdhcp.exe                                                       812              4372       \r\r                                                                                                                 vmnat.exe                                                           812              4384       \r\r                                                                                                                 svchost.exe                                                         812              4404       \r\r                                                                                                                 MsMpEng.exe                                                         812              4476       \r\r                                                                                                                 svchost.exe                                                         812              4524       \r\r                                                                                                                 svchost.exe                                                         812              4584       \r\r                                                                                                                 svchost.exe                                                         812              4720       \r\r                                                                                                                 vmware-authd.exe                                                    812              4740       \r\r                                                                                                                 vmware-usbarbitrator64.exe                                          812              4760       \r\r                                                                                                                 openvpnserv.exe                                                     812              4772       \r\r                                                                                                                 svchost.exe                                                         812              4932       \r\r                                                                                                                 prunsrv-amd64.exe                                                   812              5296       \r\r                                                                                                                 OriginWebHelperService.exe                                          812              5516       \r\r                                                                                                                 svchost.exe                                                         812              5908       \r\r                                                                                                                 conhost.exe                                                         5296             6084       \r\r                                                                                                                 svchost.exe                                                         812              6484       \r\r                                                                                                                 vmware-hostd.exe                                                    812              6500       \r\r                                                                                                                 NisSrv.exe                                                          812              7348       \r\r                                                                                                                 SearchIndexer.exe                                                   812              7236       \r\r                                                                                                                 svchost.exe                                                         812              9548       \r\r                                                                                                                 svchost.exe                                                         812              10224      \r\r                                                                                                                 svchost.exe                                                         812              3600       \r\r                                                                                                                 SecurityHealthService.exe                                           812              11128      \r\r                                                                                                                 SgrmBroker.exe                                                      812              11776      \r\r                                                                                                                 svchost.exe                                                         812              7368       \r\r                                                                                                                 svchost.exe                                                         812              1316       \r\r                                                                                                                 svchost.exe                                                         812              11216      \r\r                                                                                                                 svchost.exe                                                         812              11972      \r\r                                                                                                                 csrss.exe                                                           3852             8548       \r\r                                                                                                                 winlogon.exe                                                        3852             1760       \r\r                                                                                                                 fontdrvhost.exe                                                     1760             7656       \r\r                                                                                                                 dwm.exe                                                             1760             6052       \r\r                                                                                                                 NVDisplay.Container.exe                                             1624             5452       \r\r                                                                                                                 svchost.exe                                                         812              12196      \r\r                                                                                                                 svchost.exe                                                         812              4604       \r\rC:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe                                                  nvcontainer.exe                                                     4192             8840       \r\rC:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe                                                  nvcontainer.exe                                                     4192             11536      \r\rC:\\WINDOWS\\system32\\sihost.exe                                                                                   sihost.exe                                                          1832             1168       \r\rC:\\WINDOWS\\system32\\svchost.exe                                                                                  svchost.exe                                                         812              8512       \r\rC:\\WINDOWS\\system32\\svchost.exe                                                                                  svchost.exe                                                         812              6988       \r\rC:\\WINDOWS\\system32\\taskhostw.exe                                                                                taskhostw.exe                                                       1456             6564       \r\rC:\\WINDOWS\\Explorer.EXE                                                                                          explorer.exe                                                        12248            1372       \r\r                                                                                                                 svchost.exe                                                         812              11304      \r\rC:\\WINDOWS\\system32\\svchost.exe                                                                                  svchost.exe                                                         812              5736       \r\r                                                                                                                 ctfmon.exe                                                          3712             3200       \r\rC:\\WINDOWS\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe        StartMenuExperienceHost.exe                                         96               7812       \r\rC:\\Windows\\System32\\RuntimeBroker.exe                                                                            RuntimeBroker.exe                                                   96               4296       \r\rC:\\Windows\\SystemApps\\Microsoft.Windows.Cortana_cw5n1h2txyewy\\SearchUI.exe                                       SearchUI.exe                                                        96               3900       \r\rC:\\Windows\\System32\\RuntimeBroker.exe                                                                            RuntimeBroker.exe                                                   96               5492       \r\rC:\\WINDOWS\\system32\\SettingSyncHost.exe                                                                          SettingSyncHost.exe                                                 96               8284       \r\rC:\\WINDOWS\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy\\LockApp.exe                                                LockApp.exe                                                         96               1544       \r\rC:\\Windows\\System32\\RuntimeBroker.exe                                                                            RuntimeBroker.exe                                                   96               3960       \r\rC:\\Program Files (x86)\\NVIDIA Corporation\\NvNode\\NVIDIA Web Helper.exe                                           NVIDIA Web Helper.exe                                               2932             3800       \r\rC:\\WINDOWS\\system32\\conhost.exe                                                                                  conhost.exe                                                         3800             2268       \r\r                                                                                                                 nvsphelper64.exe                                                    4192             3252       \r\rC:\\Program Files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\NVIDIA Share.exe                                   NVIDIA Share.exe                                                    8840             10200      \r\rC:\\Program Files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\NVIDIA Share.exe                                   NVIDIA Share.exe                                                    10200            3632       \r\rC:\\Program Files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\NVIDIA Share.exe                                   NVIDIA Share.exe                                                    10200            11664      \r\rC:\\Windows\\System32\\SecurityHealthSystray.exe                                                                    SecurityHealthSystray.exe                                           1372             272        \r\rC:\\Windows\\System32\\RtkAudUService64.exe                                                                         RtkAudUService64.exe                                                1372             8904       \r\rC:\\Program Files (x86)\\Common Files\\Java\\Java Update\\jusched.exe                                                 jusched.exe                                                         916              1036       \r\rC:\\WINDOWS\\system32\\svchost.exe                                                                                  svchost.exe                                                         812              5832       \r\rC:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware.exe                                                      vmware.exe                                                          1372             9840       \r\rC:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware-tray.exe                                                 vmware-tray.exe                                                     9840             9048       \r\rC:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware-unity-helper.exe                                         vmware-unity-helper.exe                                             9840             2252       \r\r                                                                                                                 vmware-vmx.exe                                                      4740             11060      \r\rC:\\WINDOWS\\SystemApps\\InputApp_cw5n1h2txyewy\\WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe  WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe  96               944        \r\r                                                                                                                 Taskmgr.exe                                                         1372             11888      \r\rC:\\WINDOWS\\system32\\DllHost.exe                                                                                  dllhost.exe                                                         96               5968       \r\rC:\\Windows\\System32\\RuntimeBroker.exe                                                                            RuntimeBroker.exe                                                   96               5684       \r\rC:\\Users\\Public\\splunkd.exe                                                                                      splunkd.exe                                                         5676             8476       \r\rC:\\WINDOWS\\system32\\conhost.exe                                                                                  conhost.exe                                                         8476             12120      \r\rC:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe                                                        powershell.exe                                                      8476             5712       \r\rC:\\Windows\\System32\\Wbem\\WMIC.exe                                                                                WMIC.exe                                                            5712             2188       \r\r                                                                                                                 WmiPrvSE.exe                                                        96               9268       \r\r\r\r"
+        }
+      ]
+    }
+  },
+  "finish": "2020-09-02 21:52:42",
+  "planner": "atomic",
+  "adversary": {
+    "atomic_ordering": [
+      "94f21386-9547-43c4-99df-938ab05d45ce"
+    ],
+    "description": "test4",
+    "tags": [],
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "name": "WMI - Process enum",
+    "adversary_id": "d3f7c8fb-fd42-44cb-8c6c-ddbb469b4910"
+  },
+  "jitter": "4/8",
+  "objectives": {
+    "percentage": 0,
+    "description": "This is a default objective that runs forever.",
+    "name": "default",
+    "id": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "goals": [
+      {
+        "operator": "==",
+        "achieved": false,
+        "target": "exhaustion",
+        "count": 1048576,
+        "value": "complete"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionwav",
+      "collected_by": "",
+      "score": 1,
+      "value": "wav",
+      "technique_id": ""
+    },
+    {
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionyml",
+      "collected_by": "",
+      "score": 1,
+      "value": "yml",
+      "technique_id": ""
+    },
+    {
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionpng",
+      "collected_by": "",
+      "score": 1,
+      "value": "png",
+      "technique_id": ""
+    },
+    {
+      "trait": "server.malicious.url",
+      "unique": "server.malicious.urlkeyloggedsite.com",
+      "collected_by": "",
+      "score": 1,
+      "value": "keyloggedsite.com",
+      "technique_id": ""
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\sihost.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\sihost.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\svchost.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\svchost.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\svchost.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\svchost.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\taskhostw.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\taskhostw.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\Explorer.EXE",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\Explorer.EXE",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\svchost.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\svchost.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\SystemApps\\Microsoft.Windows",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\SystemApps\\Microsoft.Windows",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Windows\\System32\\RuntimeBroker.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Windows\\SystemApps\\Microsoft.Windows",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Windows\\SystemApps\\Microsoft.Windows",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Windows\\System32\\RuntimeBroker.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\SettingSyncHost.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\SettingSyncHost.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Windows\\System32\\RuntimeBroker.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files (x86)\\NVIDIA Corporation\\NvNode\\NVIDIA Web Helper.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files (x86)\\NVIDIA Corporation\\NvNode\\NVIDIA Web Helper.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\conhost.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\conhost.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\NVIDIA Share.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\NVIDIA Share.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\NVIDIA Share.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\NVIDIA Share.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\NVIDIA Share.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\NVIDIA Share.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Windows\\System32\\SecurityHealthSystray.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Windows\\System32\\SecurityHealthSystray.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Windows\\System32\\RtkAudUService64.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Windows\\System32\\RtkAudUService64.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files (x86)\\Common Files\\Java\\Java Update\\jusched.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files (x86)\\Common Files\\Java\\Java Update\\jusched.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\svchost.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\svchost.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware-tray.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware-tray.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware-unity-helper.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware-unity-helper.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\SystemApps\\InputApp_cw5n1h2txyewy\\WindowsInternal.ComposableShell",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\SystemApps\\InputApp_cw5n1h2txyewy\\WindowsInternal.ComposableShell",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\DllHost.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\DllHost.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Windows\\System32\\RuntimeBroker.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Users\\Public\\splunkd.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Users\\Public\\splunkd.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\WINDOWS\\system32\\conhost.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\WINDOWS\\system32\\conhost.exe",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Windows\\System32\\WindowsPowerShell\\v1.0",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0",
+      "technique_id": "T1047"
+    },
+    {
+      "trait": "host.file.path",
+      "unique": "host.file.pathC:\\Windows\\System32\\Wbem\\WMIC.exe",
+      "collected_by": "gnjezl",
+      "score": 1,
+      "value": "C:\\Windows\\System32\\Wbem\\WMIC.exe",
+      "technique_id": "T1047"
+    }
+  ],
+  "skipped_abilities": [
+    {
+      "gnjezl": []
+    }
+  ]
+}
