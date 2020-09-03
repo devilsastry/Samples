@@ -1,0 +1,175 @@
+{
+  "name": "WMI 3",
+  "host_group": [
+    {
+      "watchdog": 0,
+      "trusted": true,
+      "last_seen": "2020-09-02 21:47:02",
+      "sleep_max": 60,
+      "proxy_receivers": {},
+      "architecture": "amd64",
+      "executors": [
+        "psh",
+        "cmd"
+      ],
+      "host": "DESKTOP-FD99K7J",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "privilege": "User",
+      "contact": "tcp",
+      "sleep_min": 30,
+      "links": [
+        {
+          "status": -3,
+          "paw": "gnjezl",
+          "unique": "889994",
+          "jitter": 0,
+          "finish": null,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "cleanup": 0,
+          "collect": "2020-09-02 21:07:21",
+          "host": "DESKTOP-FD99K7J",
+          "score": 0,
+          "pin": 0,
+          "decide": "2020-09-02 21:07:21",
+          "id": 889994,
+          "facts": [],
+          "pid": null,
+          "ability": {
+            "tactic": "defense-evasion",
+            "language": null,
+            "description": "Stop terminal from logging history",
+            "executor": "psh",
+            "code": null,
+            "parsers": [],
+            "access": {},
+            "build_target": null,
+            "privilege": null,
+            "requirements": [],
+            "additional_info": {},
+            "name": "Avoid logs",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "variations": [],
+            "timeout": 60,
+            "platform": "windows",
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "cleanup": [],
+            "payloads": [],
+            "repeatable": false,
+            "technique_id": "T1070.003",
+            "buckets": [
+              "defense-evasion"
+            ],
+            "test": "Q2xlYXItSGlzdG9yeTtDbGVhcg=="
+          },
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "output": "False"
+        }
+      ],
+      "paw": "gnjezl",
+      "display_name": "DESKTOP-FD99K7J$DESKTOP-FD99K7J\\electrobot",
+      "server": "://None:None",
+      "pid": 8476,
+      "username": "DESKTOP-FD99K7J\\electrobot",
+      "platform": "windows",
+      "proxy_chain": [],
+      "group": "red",
+      "ppid": 5676,
+      "exe_name": "splunkd.exe"
+    }
+  ],
+  "start": "2020-09-02 21:29:07",
+  "steps": {
+    "gnjezl": {
+      "steps": [
+        {
+          "ability_id": "b0255b5120cbabc062d8d4510a142c3b",
+          "command": "d21pYyB1c2VyYWNjb3VudCBnZXQgL0FMTCAvZm9ybWF0OmNzdg==",
+          "delegated": "2020-09-02 21:29:07",
+          "run": "2020-09-02 21:29:21",
+          "status": 0,
+          "platform": "windows",
+          "executor": "cmd",
+          "pid": 0,
+          "description": "An adversary might use WMI to list all local User Accounts. \nWhen the test completes , there should be local user accounts information displayed on the command line.\n",
+          "name": "WMI Reconnaissance Users",
+          "attack": {
+            "tactic": "execution",
+            "technique_name": "Windows Management Instrumentation",
+            "technique_id": "T1047"
+          },
+          "output": "\r\rNode,AccountType,Caption,Description,Disabled,Domain,FullName,InstallDate,LocalAccount,Lockout,Name,PasswordChangeable,PasswordExpires,PasswordRequired,SID,SIDType,Status\r\rDESKTOP-FD99K7J,512,DESKTOP-FD99K7J\\Administrator,Built-in account for administering the computer/domain,TRUE,DESKTOP-FD99K7J,,,TRUE,FALSE,Administrator,TRUE,FALSE,TRUE,S-1-5-21-3779877407-3572262263-3860336356-500,1,Degraded\r\rDESKTOP-FD99K7J,512,DESKTOP-FD99K7J\\DefaultAccount,A user account managed by the system.,TRUE,DESKTOP-FD99K7J,,,TRUE,FALSE,DefaultAccount,TRUE,FALSE,FALSE,S-1-5-21-3779877407-3572262263-3860336356-503,1,Degraded\r\rDESKTOP-FD99K7J,512,DESKTOP-FD99K7J\\electrobot,,FALSE,DESKTOP-FD99K7J,vasu deva,,TRUE,FALSE,electrobot,TRUE,FALSE,FALSE,S-1-5-21-3779877407-3572262263-3860336356-1001,1,OK\r\rDESKTOP-FD99K7J,512,DESKTOP-FD99K7J\\Guest,Built-in account for guest access to the computer/domain,TRUE,DESKTOP-FD99K7J,,,TRUE,FALSE,Guest,FALSE,FALSE,FALSE,S-1-5-21-3779877407-3572262263-3860336356-501,1,Degraded\r\rDESKTOP-FD99K7J,512,DESKTOP-FD99K7J\\WDAGUtilityAccount,A user account managed and used by the system for Windows Defender Application Guard scenarios.,TRUE,DESKTOP-FD99K7J,,,TRUE,FALSE,WDAGUtilityAccount,TRUE,TRUE,TRUE,S-1-5-21-3779877407-3572262263-3860336356-504,1,Degraded\r\r"
+        }
+      ]
+    }
+  },
+  "finish": "2020-09-02 21:29:22",
+  "planner": "atomic",
+  "adversary": {
+    "atomic_ordering": [
+      "b0255b5120cbabc062d8d4510a142c3b"
+    ],
+    "description": "test3",
+    "tags": [],
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "name": "WMI Recon users",
+    "adversary_id": "5c433bbf-6c1b-4137-901b-f62d5f724dbf"
+  },
+  "jitter": "4/8",
+  "objectives": {
+    "percentage": 0,
+    "description": "This is a default objective that runs forever.",
+    "name": "default",
+    "id": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "goals": [
+      {
+        "operator": "==",
+        "achieved": false,
+        "target": "exhaustion",
+        "count": 1048576,
+        "value": "complete"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionwav",
+      "collected_by": "",
+      "score": 1,
+      "value": "wav",
+      "technique_id": ""
+    },
+    {
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionyml",
+      "collected_by": "",
+      "score": 1,
+      "value": "yml",
+      "technique_id": ""
+    },
+    {
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionpng",
+      "collected_by": "",
+      "score": 1,
+      "value": "png",
+      "technique_id": ""
+    },
+    {
+      "trait": "server.malicious.url",
+      "unique": "server.malicious.urlkeyloggedsite.com",
+      "collected_by": "",
+      "score": 1,
+      "value": "keyloggedsite.com",
+      "technique_id": ""
+    }
+  ],
+  "skipped_abilities": [
+    {
+      "gnjezl": []
+    }
+  ]
+}
