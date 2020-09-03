@@ -1,0 +1,192 @@
+{
+  "name": "WMI 1",
+  "host_group": [
+    {
+      "watchdog": 0,
+      "trusted": true,
+      "last_seen": "2020-09-02 21:10:40",
+      "sleep_max": 60,
+      "proxy_receivers": {},
+      "architecture": "amd64",
+      "executors": [
+        "psh",
+        "cmd"
+      ],
+      "host": "DESKTOP-FD99K7J",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "privilege": "User",
+      "contact": "tcp",
+      "sleep_min": 30,
+      "links": [
+        {
+          "status": -3,
+          "paw": "gnjezl",
+          "unique": "889994",
+          "jitter": 0,
+          "finish": null,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "cleanup": 0,
+          "collect": "2020-09-02 21:07:21",
+          "host": "DESKTOP-FD99K7J",
+          "score": 0,
+          "pin": 0,
+          "decide": "2020-09-02 21:07:21",
+          "id": 889994,
+          "facts": [],
+          "pid": null,
+          "ability": {
+            "tactic": "defense-evasion",
+            "language": null,
+            "description": "Stop terminal from logging history",
+            "executor": "psh",
+            "code": null,
+            "parsers": [],
+            "access": {},
+            "build_target": null,
+            "privilege": null,
+            "requirements": [],
+            "additional_info": {},
+            "name": "Avoid logs",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "variations": [],
+            "timeout": 60,
+            "platform": "windows",
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "cleanup": [],
+            "payloads": [],
+            "repeatable": false,
+            "technique_id": "T1070.003",
+            "buckets": [
+              "defense-evasion"
+            ],
+            "test": "Q2xlYXItSGlzdG9yeTtDbGVhcg=="
+          },
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "output": "False"
+        }
+      ],
+      "paw": "gnjezl",
+      "display_name": "DESKTOP-FD99K7J$DESKTOP-FD99K7J\\test",
+      "server": "://None:None",
+      "pid": 8476,
+      "username": "DESKTOP-FD99K7J\\test",
+      "platform": "windows",
+      "proxy_chain": [],
+      "group": "red",
+      "ppid": 5676,
+      "exe_name": "splunkd.exe"
+    }
+  ],
+  "start": "2020-09-02 21:10:34",
+  "steps": {
+    "gnjezl": {
+      "steps": [
+        {
+          "ability_id": "09e0f9cf2eb803a1c35deeecf3665fad",
+          "command": "d21pYyBwcm9jZXNzIGNhbGwgY3JlYXRlIG5vdGVwYWQuZXhl",
+          "delegated": "2020-09-02 21:10:34",
+          "run": "2020-09-02 21:10:40",
+          "status": 0,
+          "platform": "windows",
+          "executor": "cmd",
+          "pid": 0,
+          "description": "This test uses wmic.exe to execute a process on the local host.\nWhen the test completes , a new process will be started locally .A notepad application will be started when input is left on default.\n",
+          "name": "WMI Execute Local Process",
+          "attack": {
+            "tactic": "execution",
+            "technique_name": "Windows Management Instrumentation",
+            "technique_id": "T1047"
+          },
+          "output": "Executing (Win32_Process)->Create()\r\rMethod execution successful.\r\rOut Parameters:\rinstance of __PARAMETERS\r{\r\tProcessId = 10540;\r\tReturnValue = 0;\r};\r"
+        },
+        {
+          "ability_id": "09e0f9cf2eb803a1c35deeecf3665fad",
+          "command": "d21pYyBwcm9jZXNzIHdoZXJlIG5hbWU9J25vdGVwYWQuZXhlJyBkZWxldGUgPm51bCAyPiYx",
+          "delegated": "2020-09-02 21:10:44",
+          "run": null,
+          "status": -3,
+          "platform": "windows",
+          "executor": "cmd",
+          "pid": null,
+          "description": "This test uses wmic.exe to execute a process on the local host.\nWhen the test completes , a new process will be started locally .A notepad application will be started when input is left on default.\n",
+          "name": "WMI Execute Local Process",
+          "attack": {
+            "tactic": "execution",
+            "technique_name": "Windows Management Instrumentation",
+            "technique_id": "T1047"
+          }
+        }
+      ]
+    }
+  },
+  "finish": null,
+  "planner": "atomic",
+  "adversary": {
+    "atomic_ordering": [
+      "09e0f9cf2eb803a1c35deeecf3665fad"
+    ],
+    "description": "test1",
+    "tags": [],
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "name": "WMI Local Process",
+    "adversary_id": "f358cd53-29e5-4972-8633-236cf4eb450c"
+  },
+  "jitter": "4/8",
+  "objectives": {
+    "percentage": 0,
+    "description": "This is a default objective that runs forever.",
+    "name": "default",
+    "id": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "goals": [
+      {
+        "operator": "==",
+        "achieved": false,
+        "target": "exhaustion",
+        "count": 1048576,
+        "value": "complete"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionwav",
+      "collected_by": "",
+      "score": 1,
+      "value": "wav",
+      "technique_id": ""
+    },
+    {
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionyml",
+      "collected_by": "",
+      "score": 1,
+      "value": "yml",
+      "technique_id": ""
+    },
+    {
+      "trait": "file.sensitive.extension",
+      "unique": "file.sensitive.extensionpng",
+      "collected_by": "",
+      "score": 1,
+      "value": "png",
+      "technique_id": ""
+    },
+    {
+      "trait": "server.malicious.url",
+      "unique": "server.malicious.urlkeyloggedsite.com",
+      "collected_by": "",
+      "score": 1,
+      "value": "keyloggedsite.com",
+      "technique_id": ""
+    }
+  ],
+  "skipped_abilities": [
+    {
+      "gnjezl": []
+    }
+  ]
+}
